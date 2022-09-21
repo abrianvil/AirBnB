@@ -1,0 +1,28 @@
+
+CREATE TABLE Spots(
+id INTEGER PRIMARY KEY AUTOINCREAMENT, owner_id INTEGER, address STRING, city STRING, county STRING, lat FLOAT, lgn FLOAT, name STRING, description STRING, avgRating FLOAT, preview_image_id INTEGER.
+)
+
+CREATE TABLE Users(
+id INTEGER PRIMARY KEY AUTOINCREAMENT, firstName STRING, lastName STRING, email EMAIL, username STRING.
+)
+
+CREATE TABLE Bookings(
+id INTEGER PRIMARY KEY AUTOINCREAMENT, spot_id INTEGER, start_date DATE, end_date DATE, user_id INTEGER
+)
+
+CREATE TABLE Reviews(
+id INTEGER PRIMARY KEY AUTOINCREAMENT, user_id INTEGER, spot_id INTEGER, review STRING, stars INTEGER, review_image_id INTEGER
+)
+
+CREATE TABLE images(
+id INTEGER PRIMARY KEY AUTOINCREAMENT, image URL, preview BOOLEAN
+)
+
+
+<!--  TO BE REVISED-->
+<!-- CREATE TABLE Owners(
+id INTEGER PRIMARY KEY AUTOINCREAMENT, firstName STRING, lastName STRING.
+<!-- ) -->
+
+<!-- WHAT ABOUT PASSWORD/LOGIN ? -->
